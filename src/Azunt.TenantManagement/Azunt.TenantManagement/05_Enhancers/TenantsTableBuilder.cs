@@ -101,8 +101,8 @@ public class TenantsTableBuilder
                     [VendorURL] NVARCHAR(MAX) NULL,
                     [InternalAuditURL] NVARCHAR(MAX) NULL,
                     [BadgePhotoType] NVARCHAR(50) NULL,
-                    [PortalName] NVARCHAR(MAX) NULL DEFAULT ('AssureHire'),
-                    [ScreeningPartnerName] NVARCHAR(MAX) NULL DEFAULT ('AssureHire'),
+                    [PortalName] NVARCHAR(MAX) NULL DEFAULT ('Azunt'),
+                    [ScreeningPartnerName] NVARCHAR(MAX) NULL DEFAULT ('Azunt'),
                     [IsMultiPortalEnabled] BIT NULL DEFAULT 0,
                     [IsNewPortalOnly] BIT NULL DEFAULT 0
                 )", connection);
