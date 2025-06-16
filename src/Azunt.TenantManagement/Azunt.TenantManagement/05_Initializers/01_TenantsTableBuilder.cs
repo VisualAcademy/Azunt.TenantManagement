@@ -152,24 +152,6 @@ public class TenantsTableBuilder
                     }
                 }
             }
-
-            // === 기본 데이터 삽입 추가 ===
-            var cmdCountRows = new SqlCommand("SELECT COUNT(*) FROM [dbo].[Tenants]", connection);
-            int rowCount = (int)cmdCountRows.ExecuteScalar();
-
-            if (rowCount == 0)
-            {
-                var cmdInsertDefaults = new SqlCommand(@"
-                INSERT INTO [dbo].[Tenants] (ConnectionString, Name, AuthenticationHeader)
-                VALUES
-                    ('Server=.;Database=Tenant1Db;Trusted_Connection=True;', 'Tenant1', 'AuthHeader1'),
-                    ('Server=.;Database=Tenant2Db;Trusted_Connection=True;', 'Tenant2', 'AuthHeader2')
-            ", connection);
-
-                int inserted = cmdInsertDefaults.ExecuteNonQuery();
-                _logger.LogInformation($"Tenants 기본 데이터 {inserted}건 삽입 완료");
-            }
-            // ===
         }
     }
 
