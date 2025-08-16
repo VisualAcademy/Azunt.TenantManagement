@@ -5,16 +5,16 @@ using System;
 namespace Azunt.TenantManagement;
 
 /// <summary>
-/// Tenants 테이블에 기본 데이터를 삽입하는 시더 클래스입니다.
+/// Seeder class for inserting default tenant data into the Tenants table.
 /// </summary>
 public static class TenantSeeder
 {
     /// <summary>
-    /// 기본 테넌트 데이터를 삽입합니다.
-    /// 이미 동일한 이름의 테넌트가 존재하면 삽입하지 않습니다.
+    /// Inserts a default tenant record.
+    /// If a tenant with the same name already exists, insertion will be skipped.
     /// </summary>
-    /// <param name="connectionString">마스터 데이터베이스 연결 문자열</param>
-    /// <param name="logger">로깅 인스턴스</param>
+    /// <param name="connectionString">Master database connection string</param>
+    /// <param name="logger">Logging instance</param>
     public static void InsertDefaultTenant(string connectionString, ILogger logger)
     {
         using var connection = new SqlConnection(connectionString);
@@ -28,7 +28,7 @@ public static class TenantSeeder
         int exists = (int)checkCmd.ExecuteScalar();
         if (exists > 0)
         {
-            logger.LogInformation("기본 테넌트 'Azunt'가 이미 존재합니다.");
+            logger.LogInformation("Default tenant 'Azunt' already exists.");
             return;
         }
 
@@ -58,6 +58,6 @@ public static class TenantSeeder
         insertCmd.Parameters.AddWithValue("@IsNewPortalOnly", false);
 
         int inserted = insertCmd.ExecuteNonQuery();
-        logger.LogInformation($"기본 테넌트 'Azunt'가 {inserted}건 삽입되었습니다.");
+        logger.LogInformation($"Default tenant 'Azunt' has been inserted ({inserted} row(s) affected).");
     }
 }
