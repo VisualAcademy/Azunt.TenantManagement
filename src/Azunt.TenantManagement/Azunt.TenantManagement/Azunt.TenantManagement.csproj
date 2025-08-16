@@ -5,11 +5,11 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
-        <!-- 버전 정보 -->
-        <VersionPrefix>1.0.3</VersionPrefix>
+        <!-- Version -->
+        <VersionPrefix>1.0.4</VersionPrefix>
         <VersionSuffix></VersionSuffix>
 
-        <!-- NuGet 기본 정보 -->
+        <!-- NuGet metadata -->
         <Title>Azunt.TenantManagement</Title>
         <Description>Azunt.TenantManagement is a reusable .NET module for managing tenants in multi-tenant applications. It supports SQL Server with EF Core, Dapper, and ADO.NET for flexible and scalable database access.</Description>
         <PackageTags>Azunt, tenant, multi-tenant, EFCore, Dapper, ADO.NET, Blazor, SQLServer</PackageTags>
@@ -17,13 +17,17 @@
         <Authors>VisualAcademy</Authors>
         <Company>Hawaso</Company>
 
-        <!-- NuGet 링크 및 저장소 -->
+        <!-- NuGet links & repository -->
         <PackageProjectUrl>https://github.com/VisualAcademy/Azunt.TenantManagement</PackageProjectUrl>
         <RepositoryUrl>https://github.com/VisualAcademy/Azunt.TenantManagement</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
 
-        <!-- 저작권 정보 -->
+        <!-- Copyright -->
         <Copyright>© 2025 Hawaso. All rights reserved.</Copyright>
+
+        <!-- README & License for NuGet -->
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -33,6 +37,12 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
         <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+    </ItemGroup>
+
+    <!-- Include solution-root README and LICENSE in the NuGet package -->
+    <ItemGroup>
+        <None Include="..\..\..\README.md" Pack="true" PackagePath="" />
+        <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>
