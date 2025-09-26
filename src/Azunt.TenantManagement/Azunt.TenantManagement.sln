@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azunt.TenantManagement", "Azunt.TenantManagement\Azunt.TenantManagement.csproj", "{E5DB6EAB-C00F-40B7-83B4-15E8E563DBC7}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Azunt.SqlServer", "Azunt.SqlServer\Azunt.SqlServer.sqlproj", "{5B949AF5-E85C-4156-84B1-1AE7577289BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{E5DB6EAB-C00F-40B7-83B4-15E8E563DBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5DB6EAB-C00F-40B7-83B4-15E8E563DBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5DB6EAB-C00F-40B7-83B4-15E8E563DBC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B949AF5-E85C-4156-84B1-1AE7577289BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B949AF5-E85C-4156-84B1-1AE7577289BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B949AF5-E85C-4156-84B1-1AE7577289BF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5B949AF5-E85C-4156-84B1-1AE7577289BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B949AF5-E85C-4156-84B1-1AE7577289BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B949AF5-E85C-4156-84B1-1AE7577289BF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
